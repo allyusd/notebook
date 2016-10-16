@@ -21,3 +21,9 @@ var newArray = oldArray.slice();
 [Copying array by value in JavaScript](http://stackoverflow.com/questions/7486085/copying-array-by-value-in-javascript)
 
 [Javascript array copying, concat vs slice, which one is better? [closed]](http://stackoverflow.com/questions/17803586/javascript-array-copying-concat-vs-slice-which-one-is-better)
+
+## Array push front
+
+a.unshift(34);
+
+[How can I add new array elements at the beginning of an array in JavaScript?](http://stackoverflow.com/questions/8073673/how-can-i-add-new-array-elements-at-the-beginning-of-an-array-in-javascript)

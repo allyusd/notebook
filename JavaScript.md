@@ -16,6 +16,8 @@ Not use for...in
 
 ## Copy Array
 
-var c2 = a.slice(0);
+var newArray = oldArray.slice();
+
+[Copying array by value in JavaScript](http://stackoverflow.com/questions/7486085/copying-array-by-value-in-javascript)
 
 [Javascript array copying, concat vs slice, which one is better? [closed]](http://stackoverflow.com/questions/17803586/javascript-array-copying-concat-vs-slice-which-one-is-better)

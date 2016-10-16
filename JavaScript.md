@@ -13,3 +13,9 @@ Not use for...in
 ##Typescript this problem
 
 [TypeScript “this” scoping issue when called in jquery callback](http://stackoverflow.com/questions/20627138/typescript-this-scoping-issue-when-called-in-jquery-callback)
+
+## Copy Array
+
+var c2 = a.slice(0);
+
+[Javascript array copying, concat vs slice, which one is better? [closed]](http://stackoverflow.com/questions/17803586/javascript-array-copying-concat-vs-slice-which-one-is-better)

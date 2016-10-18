@@ -1,5 +1,7 @@
 ## Angular2
 
+[LIFECYCLE HOOKS / Component Lifecycle](https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html)
+
 [Angular-CLI](Angular-CLI.md)
 
 [ng2-bootstrap](https://github.com/valor-software/ng2-bootstrap)

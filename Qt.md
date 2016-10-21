@@ -27,7 +27,7 @@ class Foo : public QObject {
 public:
   ...
 private:
-  Q_DECLARE_PRIVATE(Foo)
+  Q_DECLARE_PRIVATE(Foo);
   QScopedPointer<FooPrivate> const d_ptr;
 };
 
@@ -37,10 +37,10 @@ class FooPrivate
 public:
   ...
 private:
-  Q_DISABLE_COPY(FooPrivate)
-  Q_DECLARE_PUBLIC(Foo)
+  Q_DISABLE_COPY(FooPrivate);
+  Q_DECLARE_PUBLIC(Foo);
   FooPrivate(Foo* ptr);
-  QScopedPointer<Foo> const q_ptr;
+  Foo* q_ptr;
 };
 
 FooPrivate::FooPrivate(Foo* ptr)

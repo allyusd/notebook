@@ -50,4 +50,6 @@ Foo::Foo()
   : d_ptr(new FooPrivate(this)) {}
 
 Foo::~Foo() {}
+
+#include "foo.moc"
 ```

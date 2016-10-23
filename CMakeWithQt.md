@@ -26,6 +26,10 @@ SET CMAKE_PREFIX_PATH=C:/Qt/5.7/msvc2015
   ...
 ```
 
+Todo:
+
+[AUTORCC](https://cmake.org/cmake/help/v3.7/manual/cmake-qt.7.html#autorcc)
+
 Ref:
 
 [Implementing Qt project through CMake](http://stackoverflow.com/questions/25989448/implementing-qt-project-through-cmake)
@@ -33,6 +37,8 @@ Ref:
 [CMake: Finding Qt 5 the “Right Way”](https://blog.kitware.com/cmake-finding-qt5-the-right-way/)
 
 [Qt Documentation - CMake Manual](http://doc.qt.io/qt-5/cmake-manual.html)
+
+[CMake 3.7 Documentation - cmake-qt](https://cmake.org/cmake/help/v3.7/manual/cmake-qt.7.html)
 
 [USING CMAKE WITH QT 5](https://www.kdab.com/using-cmake-with-qt-5/)
 

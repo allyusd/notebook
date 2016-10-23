@@ -30,3 +30,6 @@ Windows 版本的虛擬桌面
 
 [Screenshot Captor 免費截圖軟體完美抓圖windows 7視窗](http://www.playpcesor.com/2012/02/screenshot-captor-windows-7.html)
 
+##[Q-Dir](http://www.softwareok.com/?seite=Freeware/Q-Dir) - the Quad Explorer
+
+可以同時呈現四個資料夾的檔案總管，也可以將目前資料夾路徑保存成我的最愛，超方便！

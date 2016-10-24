@@ -29,6 +29,20 @@ Ref: [CMake: how to specify the version of Visual C++ to work with?](http://stac
 
 ##[Linking different libraries for Debug and Release builds in Cmake on windows?](http://stackoverflow.com/questions/2209929/linking-different-libraries-for-debug-and-release-builds-in-cmake-on-windows)
 
+##cmake visual studio subsystem windows
+```
+if(WIN32)
+   set_target_properties(WindowApplicationExample PROPERTIES LINK_FLAGS_DEBUG "/SUBSYSTEM:CONSOLE")
+   set_target_properties(WindowApplicationExample PROPERTIES COMPILE_DEFINITIONS_DEBUG "_CONSOLE")
+   set_target_properties(WindowApplicationExample PROPERTIES LINK_FLAGS_RELWITHDEBINFO "/SUBSYSTEM:CONSOLE")
+   set_target_properties(WindowApplicationExample PROPERTIES COMPILE_DEFINITIONS_RELWITHDEBINFO "_CONSOLE")
+   set_target_properties(WindowApplicationExample PROPERTIES LINK_FLAGS_RELEASE "/SUBSYSTEM:windows")
+   set_target_properties(WindowApplicationExample PROPERTIES LINK_FLAGS_MINSIZEREL "/SUBSYSTEM:windows")
+endif(WIN32)
+```
+
+Ref: [CMake: How to use different ADD_EXECUTABLE for debug build?](http://stackoverflow.com/questions/8054734/cmake-how-to-use-different-add-executable-for-debug-build)
+
 ##Todo:
 
 [Organizing a CMake project so that sources can be easily browsed in Visual C++](http://stackoverflow.com/questions/1984723/organizing-a-cmake-project-so-that-sources-can-be-easily-browsed-in-visual-c)

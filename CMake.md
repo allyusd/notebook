@@ -23,6 +23,12 @@ cmake.exe -G "Visual Studio 11 2012" ..
 
 Ref: [CMake: how to specify the version of Visual C++ to work with?](http://stackoverflow.com/questions/33917454/cmake-how-to-specify-the-version-of-visual-c-to-work-with)
 
+##cmake add include path
+
+[include_directories](https://cmake.org/cmake/help/v3.0/command/include_directories.html)
+
+##[Linking different libraries for Debug and Release builds in Cmake on windows?](http://stackoverflow.com/questions/2209929/linking-different-libraries-for-debug-and-release-builds-in-cmake-on-windows)
+
 ##Todo:
 
 [Organizing a CMake project so that sources can be easily browsed in Visual C++](http://stackoverflow.com/questions/1984723/organizing-a-cmake-project-so-that-sources-can-be-easily-browsed-in-visual-c)

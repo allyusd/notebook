@@ -39,6 +39,8 @@ if(WIN32)
    set_target_properties(WindowApplicationExample PROPERTIES LINK_FLAGS_RELEASE "/SUBSYSTEM:windows")
    set_target_properties(WindowApplicationExample PROPERTIES LINK_FLAGS_MINSIZEREL "/SUBSYSTEM:windows")
 endif(WIN32)
+
+add_executable(MyProject WIN32 main.cpp)
 ```
 
 Ref: [CMake: How to use different ADD_EXECUTABLE for debug build?](http://stackoverflow.com/questions/8054734/cmake-how-to-use-different-add-executable-for-debug-build)

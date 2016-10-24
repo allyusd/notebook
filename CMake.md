@@ -51,3 +51,5 @@ Ref: [CMake: How to use different ADD_EXECUTABLE for debug build?](http://stacko
 
 [2013-06-18-cmake-automatic-source-groups.md](https://github.com/kylewm/kylewm.com-frozen-flask/blob/master/content/2013-06-18-cmake-automatic-source-groups.md)
 
+##Ref:
+MSBuild MyProject.sln /p:Configuration=Release

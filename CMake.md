@@ -47,6 +47,28 @@ Ref: [CMake: How to use different ADD_EXECUTABLE for debug build?](http://stacko
 
 ##Todo:
 
+```
+set(ALL_FILES
+  SomeClass.h SomeClass.cpp
+  ToolClass.h ToolClass.cpp
+  ...)
+
+add_library(MyLibrary ${ALL_FILES})
+
+foreach(FILE ${ALL_FILES}) 
+  get_filename_component(PARENT_DIR "${FILE}" PATH)
+
+  # skip src or include and changes /'s to \\'s
+  string(REGEX REPLACE "(\\./)?(src|include)/?" "" GROUP "${PARENT_DIR}")
+  string(REPLACE "/" "\\" GROUP "${GROUP}")
+
+  set(GROUP "src\\${GROUP}")
+
+  source_group("${GROUP}" FILES "${FILE}")
+endforeach()
+```
+
+Ref:
 [Organizing a CMake project so that sources can be easily browsed in Visual C++](http://stackoverflow.com/questions/1984723/organizing-a-cmake-project-so-that-sources-can-be-easily-browsed-in-visual-c)
 
 [2013-06-18-cmake-automatic-source-groups.md](https://github.com/kylewm/kylewm.com-frozen-flask/blob/master/content/2013-06-18-cmake-automatic-source-groups.md)

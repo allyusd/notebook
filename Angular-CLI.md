@@ -9,4 +9,10 @@ NPM 3 or higher
 
 [Usage](https://github.com/angular/angular-cli#usage)
 
+Deploying the app via GitHub Pages
+
+```
+ng github-pages:deploy --message "Optional commit message"
+```
+
 [Updating angular-cli](https://github.com/angular/angular-cli#updating-angular-cli)

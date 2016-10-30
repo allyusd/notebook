@@ -12,12 +12,27 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 add_library (${PROJECT_NAME}Lib
-	mainwindow.h mainwindow.cpp mainwindow.ui)
+	mainwindow.h mainwindow.cpp mainwindow.ui
+	resources/resources.qrc
+	)
 
 target_link_libraries (${PROJECT_NAME}Lib Qt5::Widgets)
 
-add_executable(${PROJECT_NAME} main.cpp resources/resources.qrc)
+add_executable(${PROJECT_NAME} main.cpp)
 target_link_libraries (${PROJECT_NAME} ${PROJECT_NAME}Lib)
+```
+
+Execute project use libary qrc, need use Q_INIT_RESOURCE
+
+main.cpp
+```
+    QApplication a(argc, argv);
+    Q_INIT_RESOURCE(resources);
+
+    MainWindow w;
+    w.show();
+
+    return a.exec();
 ```
 
 Don't forget CMAKE_PREFIX_PATH

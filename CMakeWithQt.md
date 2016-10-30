@@ -11,13 +11,13 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-add_library (MyProjectLib
+add_library (${PROJECT_NAME}Lib
 	mainwindow.h mainwindow.cpp mainwindow.ui)
 
-target_link_libraries (MyProjectLib Qt5::Widgets)
+target_link_libraries (${PROJECT_NAME}Lib Qt5::Widgets)
 
-add_executable(MyProject main.cpp resources/resources.qrc)
-target_link_libraries (MyProject MyProjectLib)
+add_executable(${PROJECT_NAME} main.cpp resources/resources.qrc)
+target_link_libraries (${PROJECT_NAME} ${PROJECT_NAME}Lib)
 ```
 
 Don't forget CMAKE_PREFIX_PATH

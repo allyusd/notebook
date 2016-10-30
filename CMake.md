@@ -48,21 +48,27 @@ Ref: [CMake: How to use different ADD_EXECUTABLE for debug build?](http://stacko
 ##for the VS folders to mirror the folder structure of your project
 
 ```
+set(SrcDir ../src)
+
 set(ALL_FILES
-  SomeClass.h SomeClass.cpp
-  ToolClass.h ToolClass.cpp
+  ${SrcDir}/SomeClass.h ${SrcDir}/SomeClass.cpp
+  ${SrcDir}/ToolClass.h ${SrcDir}/ToolClass.cpp
   ...)
 
 add_library(MyLibrary ${ALL_FILES})
 
+# for the VS folders to mirror the folder structure of your project
 foreach(FILE ${ALL_FILES}) 
   get_filename_component(PARENT_DIR "${FILE}" PATH)
 
-  # skip src or include and changes /'s to \\'s
-  string(REGEX REPLACE "(\\./)?(src|include)/?" "" GROUP "${PARENT_DIR}")
-  string(REPLACE "/" "\\" GROUP "${GROUP}")
+  # skip src or include
+  #string(REGEX REPLACE "(\\./)?(src|include)/?" "" GROUP "${PARENT_DIR}")
 
-  set(GROUP "src\\${GROUP}")
+  # skip ../
+  string(REPLACE "../" "" GROUP "${PARENT_DIR}")
+
+  # changes /'s to \\'s
+  string(REPLACE "/" "\\" GROUP "${GROUP}")
 
   source_group("${GROUP}" FILES "${FILE}")
 endforeach()

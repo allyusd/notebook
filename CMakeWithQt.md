@@ -8,12 +8,15 @@ find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-add_library (MyProjectLib mainwindow.cpp)
+add_library (MyProjectLib
+	mainwindow.h mainwindow.cpp mainwindow.ui)
 
 target_link_libraries (MyProjectLib Qt5::Widgets)
-add_executable(MyProject main.cpp)
+
+add_executable(MyProject main.cpp resources/resources.qrc)
 target_link_libraries (MyProject MyProjectLib)
 ```
 
@@ -25,10 +28,6 @@ Don't forget CMAKE_PREFIX_PATH
 SET CMAKE_PREFIX_PATH=C:/Qt/5.7/msvc2015
   ...
 ```
-
-Todo:
-
-[AUTORCC](https://cmake.org/cmake/help/v3.7/manual/cmake-qt.7.html#autorcc)
 
 Ref:
 
@@ -47,3 +46,11 @@ Ref:
 [What package do I need to build a Qt 5 & CMake application?](http://askubuntu.com/questions/374755/what-package-do-i-need-to-build-a-qt-5-cmake-application)
 
 [Add the installation prefix of “Qt5Widgets” to CMAKE_PREFIX_PATH](http://stackoverflow.com/questions/22215900/add-the-installation-prefix-of-qt5widgets-to-cmake-prefix-path)
+
+[AUTORCC](https://cmake.org/cmake/help/v3.7/manual/cmake-qt.7.html#autorcc)
+
+Todo:
+
+[Automated translation management with Cmake and Qt5](http://stackoverflow.com/questions/19193121/automated-translation-management-with-cmake-and-qt5)
+
+[Qt5LinguistTools macros](http://doc.qt.io/qt-5/cmake-manual.html#qt5linguisttools-macros)

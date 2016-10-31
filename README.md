@@ -1,5 +1,2 @@
-# notebook
+# [Move to Wiki](https://github.com/allyusd/notebook/wiki)
 
-[Angular2](Angular2.md)
-
-[JavaScript](JavaScript.md)

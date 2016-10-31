@@ -1,4 +1,7 @@
-PIMPL [How to use the Qt's PIMPL idiom?](http://stackoverflow.com/questions/25250171/how-to-use-the-qts-pimpl-idiom)
+#[Qt](https://www.qt.io/)
+Cross-platform software development for embedded & desktop 
+
+##PIMPL [How to use the Qt's PIMPL idiom?](http://stackoverflow.com/questions/25250171/how-to-use-the-qts-pimpl-idiom)
 
 a minimal pimpl-based interface, not derived from QObject
 ```
